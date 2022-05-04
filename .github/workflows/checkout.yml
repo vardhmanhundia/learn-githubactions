@@ -1,5 +1,5 @@
 name: 'checkout-learn'
-on: [pull_request]
+on: [push, pull_request]
 jobs:
   check-out-repo:
     runs-on: ubuntu-latest
