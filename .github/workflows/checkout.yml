@@ -1,0 +1,11 @@
+name: 'checkout-learn'
+on: [pull_request]
+jobs:
+  check-out-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'add checkout feature'
+        uses: actions/checkout@v3
+      - name: 'Listing all the files'
+        run: ls -a
+
