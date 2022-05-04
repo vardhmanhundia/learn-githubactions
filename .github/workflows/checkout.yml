@@ -1,5 +1,5 @@
 name: 'checkout-learn'
-on: [pull_request]
+on: [push, pull_request]
 jobs:
   check-out-repo:
     runs-on: ubuntu-latest
@@ -7,5 +7,14 @@ jobs:
       - name: 'add checkout feature'
         uses: actions/checkout@v3
       - name: 'Listing all the files'
-        run: ls -a
+        run: |
+          pwd
+          ls -a
+      - name: 'My repository details'
+        run: |
+          echo ${{ github.repository }}
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          # git checkout $GITHUB_REPOSITORY:$GITHUB_SHA
 
