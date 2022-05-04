@@ -10,4 +10,11 @@ jobs:
         run: |
           pwd
           ls -a
+      - name: 'My repository details'
+        run: |
+          echo ${{ github.repository }}
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          # git checkout $GITHUB_REPOSITORY:$GITHUB_SHA
 
